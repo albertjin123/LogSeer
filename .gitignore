@@ -1,0 +1,35 @@
+# ===== 构建产物 =====
+build/
+build-*/
+*.exe
+*.dll
+*.lib
+*.so
+*.dylib
+*.manifest
+*.obj
+*.o
+*.pdb
+
+# ===== Qt Creator =====
+*.user
+*.user.*
+CMakeLists.txt.user
+CMakeLists.txt.user.*
+
+# ===== 第三方库 =====
+llmqore-0.8.0/
+llmqore/
+
+# ===== IDE / 编辑器 =====
+.vscode/
+.idea/
+*.swp
+*~
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+
+# ===== 敏感信息 =====
+config/secrets.json

@@ -1,0 +1,25 @@
+2026-10-11 10:00:00 [INFO]  Database started, version=PostgreSQL 15.4
+2026-10-11 10:00:01 [INFO]  Listening on 0.0.0.0:5432
+2026-10-11 10:00:05 [INFO]  Replication slot "replica1" active
+2026-10-11 10:00:10 [INFO]  Autovacuum started
+2026-10-11 10:05:00 [WARN]  Slow query: 2345ms
+2026-10-11 10:05:00 [WARN]    SELECT * FROM orders WHERE status='pending' AND created_at < '2026-01-01'
+2026-10-11 10:05:00 [WARN]    Missing index on orders(status, created_at)
+2026-10-11 10:10:00 [WARN]  Slow query: 4521ms
+2026-10-11 10:10:00 [WARN]    SELECT u.*, o.* FROM users u JOIN orders o ON u.id=o.user_id
+2026-10-11 10:15:00 [ERROR] Deadlock detected
+2026-10-11 10:15:00 [ERROR]   Process 1234 waits for ShareLock on transaction 5678
+2026-10-11 10:15:00 [ERROR]   Process 5678 waits for ShareLock on transaction 1234
+2026-10-11 10:15:01 [ERROR]   Deadlock resolved by aborting process 1234
+2026-10-11 10:20:00 [WARN]  Table bloat detected: orders (35% dead tuples)
+2026-10-11 10:25:00 [INFO]  Manual VACUUM started on orders
+2026-10-11 10:30:00 [INFO]  VACUUM completed, 12GB reclaimed
+2026-10-11 10:35:00 [WARN]  Replication lag: 15s
+2026-10-11 10:40:00 [ERROR] Replication lag: 120s
+2026-10-11 10:40:00 [ERROR]   Replica replica1 is falling behind
+2026-10-11 10:45:00 [WARN]  Replication lag: 45s
+2026-10-11 10:50:00 [INFO]  Replication lag: 2s, recovered
+2026-10-11 10:55:00 [ERROR] Connection pool exhausted: 100/100
+2026-10-11 10:55:01 [ERROR]   Rejecting new connections
+2026-10-11 10:56:00 [INFO]  Connection pool usage: 78/100
+2026-10-11 11:00:00 [INFO]  Database healthy, uptime=1h

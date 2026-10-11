@@ -1,0 +1,13 @@
+{
+  "deepseek": {
+    "displayName": "DeepSeek",
+    "apiUrl": "https://api.deepseek.com",
+    "apiKey": "",
+    "model": "deepseek-flash",
+    "models": [
+      "deepseek-flash",
+      "deepseek-reasoner"
+    ],
+    "timeout": 30,
+  }
+}
